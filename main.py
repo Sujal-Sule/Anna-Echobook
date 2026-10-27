@@ -352,7 +352,7 @@ async def reset_conversation_history(book_id: str, current_user: dict = Depends(
     return {"status": "ok", "deleted_count": deleted_count}
 
 
-@app.get("/health")
+@app.head("/health")
 async def health():
     return {"status": "ok", "service": "echobook-backend"}
 
